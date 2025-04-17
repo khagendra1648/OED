@@ -6,19 +6,12 @@ import cors from "cors"
 
 @Singleton()
 export class BspApplication{
-    constructor(private application=express(),controllers:Object[]){
+    controllers:any[]
+    constructor(private application=express(),controllers:any[]){
         application.use(cors({origin:["http://localhost:3000"],credentials:true}))
         application.use(express.json())
         application.use(cookieParser())
-
-        controllers.forEach(controller=>{
-            Reflect.getMetadataKeys(controller).forEach(name=>{
-                let metaData=Reflect.getMetadata(name,controller)
-                if(metaData.router){
-                    this.application.use(metaData.path,metaData.router)
-                }
-            })
-        })
+        this.controllers=controllers
     }
 
     getApplication(){
@@ -29,6 +22,15 @@ export class BspApplication{
         new Promise((resolve,reject)=>{
             this.application.listen(port,()=>{
                 console.log(`Server running on port ${port}`)
+                this.controllers.forEach((controller:any)=>{
+                    let obj=new controller()
+                    Reflect.getMetadataKeys(obj).forEach(name=>{
+                        let metaData=Reflect.getMetadata(name,obj)
+                        if(metaData.router){
+                            this.application.use(metaData.path,metaData.router)
+                        }
+                    })
+                })
                 resolve("")
             })
         })

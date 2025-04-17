@@ -14,15 +14,15 @@ import { EventController } from './routes/Event/Event.controller';
 
 dotenv.config()
 const bspApplication=new BspApplication(express(),[ 
-    new AuthController(),
-    new OrderController(),
-    new PostController(),
-    new MenuController(),
-    new DonateController(),
-    new articleController(),
-    new EventController()
-    
+    AuthController,
+    OrderController,
+    PostController,
+    MenuController,
+    DonateController,
+    articleController,
+    EventController
 ])
+
 const app=bspApplication.getApplication()
 app.use("/public",express.static("./public"))
 app.use(CustomError.sendResponse)
@@ -34,6 +34,7 @@ function applicationStart(AppDataSource: DataSource) {
             console.log("Connected to database")
 
         }).catch((e) => {
+            console.log(e)
             reject(new ApplicationStartError(e.message))
         })
     })

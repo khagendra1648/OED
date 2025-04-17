@@ -112,10 +112,10 @@ function NgoArticle() {
             <div className="sidebar">
                 <h3 className="sidebar-heading">Admin Panel</h3>
                 <ul className="sidebar-menu">
-                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/NgoDashboard">Dashboard</a></li>
 
-                    <li><a href="#">Order</a></li>
-                    <li><a href="#">Menu</a></li>
+                    {/* <li><a href="#">Order</a></li>
+                    <li><a href="#">Menu</a></li> */}
                     <li><a href="#">Donations</a></li>
                 </ul>
             </div>

@@ -9,8 +9,7 @@ import { LoginGuard, LoginStaff } from "../../guards/role.guard";
 export class AuthController {
     constructor(
         private service=new AuthService()
-    ) {
-    }
+    ) {}
 
     @Post("/register")
     async register(req:Request){

@@ -10,10 +10,10 @@ function NgoDashboard() {
                 <h3 className="sidebar-heading">Ngo</h3>
                 <ul className="sidebar-menu">
                     <li><a href="#" className='active'>Dashboard</a></li>
-                    <li><a href="/order">Article</a></li>
-
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Donations</a></li>
+                    <li><a href="/NgoArticle">Article</a></li>
+                    <li><a href="/Ngoevent">EVENTS</a></li>
+                    <li><a href="/NgoDonation">Donations</a></li>
+                    
 
                 </ul>
             </div>

@@ -43,12 +43,12 @@ function AdminOrder() {
         <h3 className="sidebar-heading">Admin Panel</h3>
         <ul className="sidebar-menu">
           <li>
-            <a href="#" className="active">
+            <a href="/Admindashboard" className="active">
               Dashboard
             </a>
           </li>
           <li>
-            <a href="/order">Order</a>
+            <a href="/AdminOrder">Order</a>
           </li>
           <li>
             <a href="/MenuDash">Menu </a>

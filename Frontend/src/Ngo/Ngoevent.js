@@ -132,7 +132,7 @@ const openModal =(menuList) => {
             <div className="sidebar">
                 <h3 className="sidebar-heading">Ngo Panel</h3>
                 <ul className="sidebar-menu">
-                    <li><a href="/dashboard">Ngo pannel</a></li>
+                    <li><a href="/Admindashboard">Ngo pannel</a></li>
 
                     <li><a href="/NgoDonation">Donation</a></li>
                     <li><a href="/NgoArticle">Article</a></li>

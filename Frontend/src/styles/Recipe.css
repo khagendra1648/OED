@@ -1,0 +1,178 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .container-fluid {
+    padding: 0 2rem;
+  }
+  
+  /* MDBContainer Styling */
+  .mdb-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+  }
+  
+  h1.text {
+    color: #ff6f61;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* MDBCard Styling */
+  .mdb-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .mdb-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .mdb-card-body {
+    padding: 2rem !important;
+  }
+  
+  .mdb-row {
+    margin-bottom: 1rem;
+  }
+  
+  .mdb-col h6 {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+  }
+  
+  .mdb-input, .mdb-text-area {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 0.8rem !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mdb-input:focus, .mdb-text-area:focus {
+    border-color: #ff6f61 !important;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.3) !important;
+    outline: none !important;
+  }
+  
+  hr.mx-n3 {
+    border-top: 2px solid #f0f0f0;
+    margin: 1.5rem 0;
+  }
+  
+  /* Button Styling */
+  .mdb-btn {
+    background: linear-gradient(135deg, #ff6f61, #ff8c61);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .mdb-btn:hover {
+    background: linear-gradient(135deg, #ff8c61, #ff6f61);
+    transform: translateY(-2px);
+  }
+  
+  .mdb-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Recipe Cards Section */
+  .row.justify-content-around {
+    margin-top: 3rem;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    color: #ff6f61;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .btn-primary {
+    background: #ff6f61;
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #ff8c61;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mdb-container {
+      padding: 1.5rem;
+    }
+  
+    h1.text {
+      font-size: 2rem;
+    }
+  
+    .card {
+      width: 100% !important;
+      margin-bottom: 1.5rem;
+    }
+  
+    .mdb-col.ps-5 {
+      padding-left: 1rem !important;
+    }
+  
+    .mdb-col.pe-5 {
+      padding-right: 1rem !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .mdb-btn {
+      width: 100%;
+      padding: 0.8rem;
+    }
+  
+    .card-body {
+      padding: 1rem;
+    }
+  }

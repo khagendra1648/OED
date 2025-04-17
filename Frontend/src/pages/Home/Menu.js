@@ -36,14 +36,16 @@ function Menu() {
         console.error("Error:", error);
       });
   };
+
   useEffect(() => {
     fetchmenuList();
   }, []);
+
   const mapRef = useRef(null);
   const [location, setLocation] = useState([
     27.70770481291534, 85.32522362345625,
   ]);
-  //Send location variable in place of location in database
+  // Send location variable in place of location in the database
   const [address, setAddress] = useState("");
 
   const onLocationChange = (location) => {
@@ -52,15 +54,29 @@ function Menu() {
 
   useEffect(() => {
     const fetchAddress = async () => {
-      const response = await fetch(
-        `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=12fb8a882afb473aafcc3be8ea7267cb`
+      try {
+        console.log("Fetching address for location:", location);  // Log the coordinates being used
+        
+        // Nominatim API for Geocoding (OpenStreetMap)
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?lat=${location[0]}&lon=${location[1]}&format=json`
+        );
+        const data = await response.json();
+        
+        // Log the full response to inspect the API data structure
+        console.log("API Response:", data);
 
-        // New API KEY
-        // `https://api.opencagedata.com/geocode/v1/json?q=${location[0]}+${location[1]}&key=0f11663459b6469293821368875f9787`
-      );
-      const data = await response.json();
-      const locationName = data.results[0].formatted;
-      setAddress(locationName);
+        if (data.address) {
+          const locationName = `${data.address.road}, ${data.address.city}, ${data.address.country}`;
+          setAddress(locationName);
+        } else {
+          console.error("No results found for the given location.");
+          setAddress("Location not found.");
+        }
+      } catch (error) {
+        console.error("Error fetching address:", error);
+        setAddress("Error fetching address.");
+      }
     };
 
     fetchAddress();
@@ -81,28 +97,26 @@ function Menu() {
 
   const createOrder = async (e) => {
     e.preventDefault();
-    let addOrder = 'http://localhost:10000/Order/create_order'
+    let addOrder = 'http://localhost:10000/Order/create_order';
     let addOrderResponse = await fetch(addOrder, {
       method: "POST",
-      headers:{
-        "content-type":"application/json"
+      headers: {
+        "content-type": "application/json"
       },
       body: JSON.stringify({
-        order_items:cart.map(car=>car.Id),
-        order_locations:address
+        order_items: cart.map(car => car.Id),
+        order_locations: address
       }),
     });
     let addOrderJson = await addOrderResponse.json();
-    return addOrderJson
+    return addOrderJson;
   };
 
   return (
     <div>
       <Header />
-      <div class="container-fluid">
-       
-
-        <div class="row justify-content-around ">
+      <div className="container-fluid">
+        <div className="row justify-content-around ">
           {menuList.map((item) => (
             <Card style={{ width: "18rem", marginBottom: "2rem" }}>
               <Card.Body>
@@ -115,7 +129,6 @@ function Menu() {
                 <Card.Title>{item.menu_name}</Card.Title>
                 <Card.Text>{item.menu_type}</Card.Text>
                 <Card.Text>{item.menu_price}</Card.Text>
-
                 <Card.Text>{item.menu_rating}</Card.Text>
                 <Card.Text>{item.menu_}</Card.Text>
 
@@ -137,7 +150,6 @@ function Menu() {
           <thead>
             <tr>
               <th>ID</th>
-
               <th>Name of Menus</th>
               <th>Price</th>
               <th>Image</th>
@@ -147,7 +159,7 @@ function Menu() {
           <tbody>
             {cart.map((cartItem) => {
               return (
-                <tr>
+                <tr key={cartItem.id}>
                   <td>{cartItem.id}</td>
                   <td>{cartItem.menu_name}</td>
                   <td>{cartItem.menu_price}</td>
