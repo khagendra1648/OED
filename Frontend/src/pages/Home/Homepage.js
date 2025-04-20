@@ -14,7 +14,7 @@ const Homepage = () => {
                             <h1 className="text-black">OED:ORDER EAT DELIVERY</h1>
                             <h2 className="text-black">Order</h2>
                             <p className="text-black pt-2 pb-5">
-                                Plateshare is the platform where you can order,donate.
+                                OED is the platform where you can order,donate.
                             </p>
 
                         </div>

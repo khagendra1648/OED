@@ -35,7 +35,7 @@ function Login() {
                         alert ("Admin Logged in sucessfully")
                     }
                     else{
-                        window.location="http://localhost:3000/Menu"
+                        window.location="http://localhost:3000/Homepage"
                     }
 
                 }
@@ -55,40 +55,12 @@ function Login() {
         }).catch(e => {
             console.log(e)
         })
-        // if (data.status === 200) {
-        //     if (parsedData.role === "admin") {
-        //       navigate("/admin-dashboard");
-        //     } else if (parsedData.role === "guide") {
-        //       navigate("/guide/complete");
-        //     } else if (parsedData.role === "seller") {
-        //       navigate("/seller/complete");
-        //     } else {
-        //       navigate("/AdminDashboard");
-        //     }
-            
-        //   }
-        
-        //   if (data.status === 200) {
-        //     if (parsedData.role === "admin") {
-        //       navigate("/admin-dashboard");
-        //     } else if (parsedData.role === "guide") {
-        //       navigate("/guide/complete");
-        //     } else if (parsedData.role === "seller") {
-        //       navigate("/seller/complete");
-        //     } else {
-        //       navigate("/NgoDashboard");
-        //     }
-        //   }
 
     }
     return (
 
         <div className='container-login'>
-            {/* <div className="logo-login">
-                <a href="/">
-                    <img src={logoImage} alt="" width="120px" />
-                </a>
-            </div> */}
+          
 
             <div className="header-login">
                 <div className="text-login">Login</div>

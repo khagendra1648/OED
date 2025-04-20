@@ -53,9 +53,7 @@ function AdminOrder() {
           <li>
             <a href="/MenuDash">Menu </a>
           </li>
-          <li>
-            <a href="#">Donations</a>
-          </li>
+          
         </ul>
       </div>
 

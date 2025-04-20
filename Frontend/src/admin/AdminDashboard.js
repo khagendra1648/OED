@@ -12,7 +12,7 @@ function AdminDashboard () {
                     <li><a href="AdminDashboard" className='active'>Dashboard</a></li>
                     <li><a href="/AdminOrder">Order</a></li>  
                     <li><a href="/MenuDash">Menu </a></li>
-                    <li><a href="/AdminDonation">Donations</a></li>
+                    
                 
                 </ul>
             </div>

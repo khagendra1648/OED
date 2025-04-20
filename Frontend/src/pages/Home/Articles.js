@@ -34,26 +34,39 @@ import Header from '../../components/Header'
 
       <div class="row justify-content-around ">
                     {articleList.map((item) => (
-                        <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
+                        // <Card style={{ width: '18rem', 'marginBottom': '2rem' }}>
 
-                            <Card.Body>
-                                <Card.Title>Articletopic:
-                                    {item.article_topic}</Card.Title>
-                                <Card.Text>
-                                    {item.article_description}
-                                </Card.Text>
-                                <Card.Text>
-                                    {item.article_publisheddate}
-                                </Card.Text>
+                        //     <Card.Body>
+                        //         <Card.Title>Articletopic:
+                        //             {item.article_topic}</Card.Title>
+                        //         <Card.Text>
+                        //             {item.article_description}
+                        //         </Card.Text>
+                        //         <Card.Text>
+                        //             {item.article_publisheddate}
+                        //         </Card.Text>
 
-                                <Card.Text>
-                                    {item.posted_by}
-                                </Card.Text>
+                        //         <Card.Text>
+                        //             {item.posted_by}
+                        //         </Card.Text>
 
 
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
+                                
+                        //     </Card.Body>
+                        // </Card>
+                        <Card  style={{ width: "18rem", marginBottom: "2rem" }}>
+                                        <Card.Body>
+                                          <img
+                                            width={200}
+                                            src={`http://localhost:10000/public/images/${item.article_Image}`}
+                                            alt={item.article_name}
+                                          />
+                                          <Card.Title>Article Name: {item.article_name}</Card.Title>
+                                
+                                          <Card.Text>Article Description: {item.article_description}</Card.Text>
+                                          <Card.Text>Article type: {item.article_description}</Card.Text>
+                                        </Card.Body>
+                                      </Card>
                     )
                     )
                     }

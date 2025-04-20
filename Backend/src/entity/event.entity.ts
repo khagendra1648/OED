@@ -4,7 +4,7 @@ import { Role } from '../typings/base.type';
 import { ImageField } from '../lib/imageHandler';
 
 @Entity()
-export class event extends GlobalEntity {
+export class Event extends GlobalEntity {
     @Column()
     event_name: string
     @Column()

@@ -148,7 +148,7 @@ const openModal =(menuList) => {
 
                     <li><a href="/AdminOrder">Order</a></li>
                     <li><a href="#">Menu</a></li>
-                    <li><a href="/AdminDonation">Donations</a></li>
+                    
                 </ul>
             </div>
 

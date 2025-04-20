@@ -1,6 +1,6 @@
 import { AppDataStore } from "../data-source";
-import { event } from "../entity/event.entity";
+import { Event } from "../entity/event.entity";
 
 
 
-export const eventRepo = AppDataStore.getRepository(event)
+export const eventRepo = AppDataStore.getRepository(Event)

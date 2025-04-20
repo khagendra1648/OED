@@ -73,6 +73,9 @@ const Header = () => {
                   <Nav.Link as={Link} to="/Recipe">
                     Recipes
                   </Nav.Link>
+                  <Nav.Link as={Link} to="/Event">
+                    Event
+                  </Nav.Link>
                   <Nav.Link onClick={handleLogout}>
                     <i class="fa-solid fa-right-from-bracket"></i>
                   </Nav.Link>

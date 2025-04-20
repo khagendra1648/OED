@@ -22,7 +22,7 @@ export class ImageHandler{
     mimeType:RegExp
     fileSize:number
     compressedPath:string
-    constructor(path:string, mimeType:RegExp=/^.*$/, fileSize:number=50000,compressedPath:string){
+    constructor(path:string, mimeType:RegExp=/^.*$/, fileSize:number=50000000,compressedPath:string){
         this.filepath=path
         this.compressedPath=compressedPath
         this.mimeType=mimeType

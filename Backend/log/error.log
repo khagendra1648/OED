@@ -1993,3 +1993,521 @@ EntityMetadataNotFoundError: No metadata for "donate" was found.
 
 ----------------------------------------------------------------------------------------------------
 
+---------------------------------/create_article 2025/3/0 21:28:57---------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (C:\Users\khage\test\Backend\src\middleware\error.middleware.ts:57:14)
+    at FileStream.<anonymous> (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:103:43)
+    at FileStream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2025/3/0 21:33:41---------------------------------
+
+TypeError: Cannot read properties of undefined (reading '0')
+    at articleController.<anonymous> (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:19:63)
+    at step (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:42:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:23:53)
+    at C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:13:12)
+    at articleController.create (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:60:16)
+    at articleController.<anonymous> (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:218:42)
+    at step (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:75:23)
+    at Object.next (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:56:53)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2025/3/0 21:35:32---------------------------------
+
+TypeError: Cannot read properties of undefined (reading '0')
+    at articleController.<anonymous> (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:19:63)
+    at step (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:42:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:23:53)
+    at C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:17:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:13:12)
+    at articleController.create (C:\Users\khage\test\Backend\src\routes\Article\article.controller.ts:60:16)
+    at articleController.<anonymous> (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:218:42)
+    at step (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:75:23)
+    at Object.next (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:56:53)
+
+----------------------------------------------------------------------------------------------------
+
+---------------------------------/create_article 2025/3/0 21:43:36---------------------------------
+
+Error: MimeType or size doesn't match
+    at new FileSizeExceed (C:\Users\khage\test\Backend\src\middleware\error.middleware.ts:57:14)
+    at FileStream.<anonymous> (C:\Users\khage\test\Backend\src\lib\imageHandler.ts:103:43)
+    at FileStream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_event 2025/3/0 21:51:56------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at eventModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:28:45)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 21:52:26----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:24:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 21:55:44----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_event 2025/3/0 21:55:48------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at eventModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:28:45)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 21:56:8-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 21:58:30----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 21:59:35----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 21:59:44----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:1:23-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:1:30-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:3:35-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:7:43-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:8:26-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 22:11:35----------------------------------
+
+TypeError: event_entity_1.event is not a constructor
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:15:22)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+    at eventService.createevent (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:49:16)
+    at EventController.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.controller.ts:20:34)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.controller.ts:42:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.controller.ts:23:53)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_event 2025/3/0 22:13:48------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "Event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at eventModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:28:45)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/create_event 2025/3/0 22:14:4-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "Event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 22:14:15----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "Event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+----------------------------------/create_event 2025/3/0 22:14:58----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "Event" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.insert (C:\Users\khage\test\Backend\src\repository\Repository.ts:339:41)
+    at eventModel.GlobalModel.create (C:\Users\khage\test\Backend\src\model\global.model.ts:14:26)
+    at eventService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:23:32)
+    at step (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Event\Event.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:24:56-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_donate 2025/3/0 22:25:2------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_donate 2025/3/0 22:25:3------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get_donate 2025/3/0 22:25:4------------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:17-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:18-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:19-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:19-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:20-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:39:20-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------/get_donate 2025/3/0 22:53:30-----------------------------------
+
+EntityMetadataNotFoundError: No metadata for "donate" was found.
+    at DataSource.getMetadata (C:\Users\khage\test\Backend\src\data-source\DataSource.ts:450:30)
+    at Repository.get metadata [as metadata] (C:\Users\khage\test\Backend\src\repository\Repository.ts:53:40)
+    at Repository.find (C:\Users\khage\test\Backend\src\repository\Repository.ts:544:39)
+    at donateModel.GlobalModel.find (C:\Users\khage\test\Backend\src\model\global.model.ts:22:26)
+    at donateService.<anonymous> (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:24:48)
+    at step (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:33:23)
+    at Object.next (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:14:53)
+    at C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\khage\test\Backend\src\routes\Donate\Donate.service.ts:4:12)
+
+----------------------------------------------------------------------------------------------------
+
