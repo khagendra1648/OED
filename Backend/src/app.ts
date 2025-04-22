@@ -11,6 +11,7 @@ import { MenuController } from "./routes/menu/Menu.controller"
 import { DonateController } from "./routes/Donate/Donate.controller"
 import { ArticleController } from './routes/Article/article.controller';
 import { EventController } from './routes/Event/Event.controller';
+import { UserController } from "./routes/user/user.controller"
 
 dotenv.config()
 const bspApplication=new BspApplication(express(),[ 
@@ -20,11 +21,12 @@ const bspApplication=new BspApplication(express(),[
     MenuController,
     DonateController,
     ArticleController,
-    EventController
+    EventController,
+    UserController
 ])
 
 const app=bspApplication.getApplication()
-app.use("/public",express.static("./public"))
+app.use("/public",express.static("./../public"))
 app.use(CustomError.sendResponse)
 
 function applicationStart(AppDataSource: DataSource) {

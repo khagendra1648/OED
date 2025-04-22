@@ -118,7 +118,7 @@ function Menu() {
       <div className="container-fluid">
         <div className="row justify-content-around ">
           {menuList.map((item) => (
-            <Card style={{ width: "18rem", marginBottom: "2rem" }}>
+            <Card style={{ width: "18rem", margintop: "2em", marginBottom: "2rem" ,  }}>
               <Card.Body>
                 <>
                   <img
@@ -130,7 +130,7 @@ function Menu() {
                 <Card.Text>{item.menu_type}</Card.Text>
                 <Card.Text>{item.menu_price}</Card.Text>
                 <Card.Text>{item.menu_rating}</Card.Text>
-                <Card.Text>{item.menu_}</Card.Text>
+                {/* <Card.Text>{item.menu}</Card.Text> */}
 
                 <Button
                   variant="primary"

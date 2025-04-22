@@ -14,6 +14,8 @@ export class articleService {
     articles.article_name = create.article_name;
     articles.article_Image = create.article_Image;
     articles.article_description = create.article_description;
+    articles.article_type = create.article_type;
+
     //this code helps to create a row in article.
     await this.article_model.create(articles);
     return { statusCode: 200, message: "article is created" };

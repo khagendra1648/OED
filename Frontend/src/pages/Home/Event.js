@@ -34,7 +34,9 @@ function Event() {
         <div className="row justify-content-around">
           {eventList.length > 0 ? (
             eventList.map((item, index) => (
+              
               <Card key={index} style={{ width: "18rem", marginBottom: "2rem" }}>
+                {console.log(item)}
                 <Card.Body>
                   <img
                     width={200}

@@ -11,6 +11,7 @@ export class CustomError {
 
     public static sendResponse(error: CustomError, req: Request, res: Response, next: NextFunction) {
         res.statusCode = (error.statusCode) ? error.statusCode : res.statusCode
+        console.log(error)
         return res.json({ message: error.message })
     }
 }

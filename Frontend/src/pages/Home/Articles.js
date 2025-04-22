@@ -64,7 +64,7 @@ import Header from '../../components/Header'
                                           <Card.Title>Article Name: {item.article_name}</Card.Title>
                                 
                                           <Card.Text>Article Description: {item.article_description}</Card.Text>
-                                          <Card.Text>Article type: {item.article_description}</Card.Text>
+                                          
                                         </Card.Body>
                                       </Card>
                     )

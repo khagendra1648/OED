@@ -12,10 +12,11 @@ export class eventService {
     ) { }
 
     async createevent(create: eventDto) { 
+        console.log(create)
         let events = new Event()
         events.event_name = create.event_name;
         events.event_description = create.event_description;
-        events.event_Image = create.event_Image;
+        events.event_Image = create.eventImage;
 
         events.event_location = create.event_location;
         events.event_time = create.event_time;

@@ -5,6 +5,7 @@ import { post } from "./entity/post.entity";
 import { User } from "./entity/user.entity";
 import { article } from "./entity/article.entity";
 import { Event } from "./entity/event.entity";
+import { donate } from "./entity/donate.entity";
 
 export const dataStoreOptions:DataSourceOptions={
     type:"mysql",
@@ -15,7 +16,7 @@ export const dataStoreOptions:DataSourceOptions={
     debug: false,
     logging: false,
     trace: false,
-    entities:[menu,order,post,User,article,Event],
+    entities:[menu,order,post,User,article,Event,donate],
 }
 
 export const AppDataStore=new DataSource(dataStoreOptions)

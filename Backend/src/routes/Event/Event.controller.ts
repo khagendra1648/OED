@@ -15,7 +15,6 @@ export class  EventController {
     @Post("/create_event")
     @ImageSingle("event_Image")
     async create (req:AuthorizedRequest){
-        console.log("hello")
         let body =req.body
         let message=this.service.createevent(body)
         return message

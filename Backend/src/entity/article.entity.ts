@@ -12,4 +12,5 @@ export class article extends GlobalEntity{
     article_description: string
     @Column()
     article_Image:string
+  article_type: string;
 }

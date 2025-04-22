@@ -1,5 +1,7 @@
+import { LoginGuard } from "../../guards/role.guard";
 import { Controller } from "../../lib/bind";
 import { Get } from "../../lib/methods";
+import { AuthorizedRequest } from "../../typings/base.type";
 
 @Controller("/user")
 export class UserController{
@@ -8,7 +10,8 @@ export class UserController{
     ){}
 
     @Get("/get-user")
-    getUser(){
+    @LoginGuard()
+    getUser(req:AuthorizedRequest){
         return {message:"Hello User"}
     }
 

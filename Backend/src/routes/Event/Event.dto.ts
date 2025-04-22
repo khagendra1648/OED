@@ -7,7 +7,7 @@ export interface eventDto {
   event_location?: string;
   event_time?: number;
   event_description?: string;
-  event_Image?: string;
+  eventImage?: string;
 }
 export const event_schema = yup.object().shape({
   event_name: yup.string().required(),

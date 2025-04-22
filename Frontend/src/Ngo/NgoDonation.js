@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Table } from "react-bootstrap";
+import {  Button, Table } from "react-bootstrap";
 import Footer from "../components/Footer";
 
 function NgoDonation() {
@@ -47,7 +47,7 @@ function NgoDonation() {
         <h3 className="sidebar-heading">Admin Panel</h3>
         <ul className="sidebar-menu">
                     <li><a href="/NgoDashboard">Ngo panel</a></li>
-                    <li><a href="/NgoDonation">Donation</a></li>
+                    <li><a href="/Ngoevent">Event</a></li>
                     <li><a href="/NgoArticle">Article</a></li>
                     <li><a href="/NgoDonation">Donations</a></li>
                 </ul>

@@ -35,7 +35,7 @@ function Login() {
                         alert ("Admin Logged in sucessfully")
                     }
                     else{
-                        window.location="http://localhost:3000/Homepage"
+                        window.location="http://localhost:3000/"
                     }
 
                 }
