@@ -8,6 +8,7 @@ export class articleService {
   constructor(private article_model = new articleModel()) {}
 
   async createarticle(create: articleDto) {
+    console.log(create)
     //creating a instance 
     let articles = new article();
     //passing the dto value in table passed by user

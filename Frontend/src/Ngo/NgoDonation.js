@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {  Button, Table } from "react-bootstrap";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 function NgoDonation() {
   const [donateList, setdonateList] = useState([]);
@@ -92,7 +92,7 @@ function NgoDonation() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

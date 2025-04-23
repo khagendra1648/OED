@@ -18,13 +18,13 @@ export class  PostController {
     async create (req:AuthorizedRequest){
         let body =req.body
         console.log(req.body)
-        let message=this.service.createpost(body)
+        let message=await this.service.createpost(body)
         return message
     }
     @Get("/get_post")
     async read (req:AuthorizedRequest){
         let body =req.body
-        let message=this.service.getposts(body)
+        let message=await this.service.getposts(body)
         return message
     }
     @Delete("/delete_post")
@@ -32,7 +32,7 @@ export class  PostController {
         let param:{id?:string} =req.query
         if(!param.id)
                 throw new InvalidInputError("No id found")
-        let message=this.service.Deleteposts(param.id)
+        let message=await this.service.Deleteposts(param.id)
         return message
     }
 }

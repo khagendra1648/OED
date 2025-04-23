@@ -1,7 +1,8 @@
 import { LoginGuard } from "../../guards/role.guard";
 import { Controller } from "../../lib/bind";
-import { Get } from "../../lib/methods";
-import { AuthorizedRequest } from "../../typings/base.type";
+import { ImageSingle } from "../../lib/imageHandler";
+import { Get, Post } from "../../lib/methods";
+import { AuthorizedFileRequest, AuthorizedRequest } from "../../typings/base.type";
 
 @Controller("/user")
 export class UserController{
@@ -17,6 +18,13 @@ export class UserController{
 
     @Get("/")
     getU(){
-        return {message:"Hello Usesr"}
+        return {message:"Hello User"}
+        
     }
+
+    // @Post("/")
+    // @ImageSingle("upload")
+    // upload(req:AuthorizedFileRequest){
+    //     console.log(req)
+    // }
 }

@@ -17,7 +17,7 @@ export class postService {
         posts.posted_by = create.posted_by;
 
         await this.post_model.create(posts)
-        return ('post is created')
+        return {messsage:'post is created'}
     }
     async getposts(read: postDto) {
         let posts = await this.post_model.find({});
@@ -28,6 +28,6 @@ export class postService {
         if(!posts)
             throw new InvalidInputError("No id found")
         await this.post_model.delete(posts)
-        return ('menu is deleted')
+            return {message:'menu is deleted'}
     }
     }

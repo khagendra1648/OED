@@ -9,6 +9,9 @@ export class order extends GlobalEntity{
     order_price:number
    
     @Column()
+    order_quantities:number
+
+    @Column()
     order_location:string 
 
     @ManyToMany(()=>menu)

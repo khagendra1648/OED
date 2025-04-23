@@ -24,9 +24,9 @@ function NgoArticle() {
         e.preventDefault();
 
         let formData = new FormData();
-        formData.append('articlefile',article_file);
+        formData.append('article_Image',article_file);
         if (article_file && article_file.length > 0) {
-            formData.append('article_file',article_file);
+            formData.append('article_Image',article_file);
         }
         formData.append('article_Id',article_Id);
         formData.append('article_name',article_name);
@@ -188,7 +188,7 @@ function NgoArticle() {
                                     <td>{article.article_description}</td>
                                     <td>{article.article_type}</td>
     
-                                    <td><img width={100} src={`http://localhost:10000/public/src/Assests/${article.article_file}`}/></td>
+                                    <td><img width={100} src={`http://localhost:10000/public/images/${article.article_Image}`}/></td>
                         
                                     <td><Button variant="danger" onClick={()=>handleDelete(article.Id)}>Delete</Button></td>
                                 </tr>

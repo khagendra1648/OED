@@ -4,6 +4,7 @@ import { ApplicationStartError, CustomError } from "./middleware/error.middlewar
 import { DataSource } from "typeorm"
 import { AppDataStore } from "./data-source"
 import * as dotenv from "dotenv"
+import * as path from "path"
 import { AuthController } from "./routes/auth/auth.controller"
 import { OrderController } from "./routes/Order/Order.controller"
 import { PostController } from "./routes/post/post.controller"
@@ -26,7 +27,7 @@ const bspApplication=new BspApplication(express(),[
 ])
 
 const app=bspApplication.getApplication()
-app.use("/public",express.static("./../public"))
+app.use("/public",express.static(path.join(__dirname, '../public')));
 app.use(CustomError.sendResponse)
 
 function applicationStart(AppDataSource: DataSource) {

@@ -2,7 +2,7 @@ import { Controller } from "../../lib/bind"
 import { ImageSingle } from "../../lib/imageHandler";
 import { Delete, Get, Post, Put } from '../../lib/methods';
 import { InvalidInputError } from "../../middleware/error.middleware";
-import { AuthorizedRequest } from "../../typings/base.type"
+import { AuthorizedFileRequest, AuthorizedRequest } from "../../typings/base.type"
 import { eventService } from "./Event.service"
 
 @Controller("/Event")
@@ -14,8 +14,9 @@ export class  EventController {
 
     @Post("/create_event")
     @ImageSingle("event_Image")
-    async create (req:AuthorizedRequest){
+    async create (req:AuthorizedFileRequest){
         let body =req.body
+        console.log(body)
         let message=this.service.createevent(body)
         return message
     }

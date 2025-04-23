@@ -7,6 +7,7 @@ export interface articleDto {
     article_id?:string,
     article_description?:string,
     article_Image?:string,
+    articlefile?:string,
     article_type?:string,
 
 }

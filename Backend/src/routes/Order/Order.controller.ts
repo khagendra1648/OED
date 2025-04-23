@@ -13,7 +13,6 @@ export class  OrderController {
     @Post("/create_order")
     async create (req:AuthorizedRequest){
         let body=order_schema.validateSync(req.body)
-        console.log(req.body)
         let message=await this.service.createorder(body)
         return message
     }

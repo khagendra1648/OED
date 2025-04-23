@@ -1,52 +1,68 @@
-import Button from "react-bootstrap/Button";
-import Header from "../../components/Header";
-import Card from "react-bootstrap/Card";
-import React, { useState, useEffect, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import Table from "react-bootstrap/Table";
+
+import { useState, useEffect, useRef } from "react"
+import { Button, Card, Table, Container, Row, Col, Badge } from "react-bootstrap"
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import { StarFill } from "react-bootstrap-icons"
+import Header from "../../components/Header"
+import '../../styles/Menu.css';
 
 function Menu() {
-  const [cart, setCart] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [cart, setCart] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0)
+  const [menuList, setMenuList] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [activeCategory, setActiveCategory] = useState("All")
+  const [location, setLocation] = useState([27.70770481291534, 85.32522362345625])
+  const [address, setAddress] = useState("")
+  const mapRef = useRef(null)
 
+  // Add to cart function
   function addToCart(data) {
-    setCart([...cart, data]);
+    setCart([...cart, data])
   }
 
+  // Remove from cart function
+  function removeFromCart(index) {
+    const newCart = [...cart]
+    newCart.splice(index, 1)
+    setCart(newCart)
+  }
+
+  // Calculate total price
   useEffect(() => {
     const calculateTotalPrice = () => {
-      const total = cart.reduce(
-        (acc, item) => acc + parseFloat(item.menu_price),
-        0
-      );
-      setTotalPrice(total);
-    };
-    calculateTotalPrice();
-  }, [cart]);
+      const total = cart.reduce((acc, item) => acc + Number.parseFloat(item.menu_price), 0)
+      setTotalPrice(total.toFixed(2))
+    }
+    calculateTotalPrice()
+  }, [cart])
 
-  const [menuList, setmenuList] = useState([]);
-  const fetchmenuList = () => {
+  // Fetch menu items
+  const fetchMenuList = () => {
+    setIsLoading(true)
     fetch("http://localhost:10000/menu/get_menu")
       .then((response) => response.json())
       .then((data) => {
-        setmenuList(data.data);
-        console.log(menuList);
+        setMenuList(data.data)
+        setIsLoading(false)
       })
       .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+        console.error("Error:", error)
+        setIsLoading(false)
+      })
+  }
 
   useEffect(() => {
-    fetchmenuList();
-  }, []);
+    fetchMenuList()
+  }, [])
 
-  const mapRef = useRef(null);
-  const [location, setLocation] = useState([
-    27.70770481291534, 85.32522362345625,
-  ]);
-  // Send location variable in place of location in the database
-  const [address, setAddress] = useState("");
+  // // Handle location change
+  // const mapRef = useRef(null);
+  // const [location, setLocation] = useState([
+  //   27.70770481291534, 85.32522362345625,
+  // ]);
+  // // Send location variable in place of location in the database
+  // const [address, setAddress] = useState("");
 
   const onLocationChange = (location) => {
     setLocation(location);
@@ -92,98 +108,202 @@ function Menu() {
       });
     }
   }, [onLocationChange]);
-
-  const [order, setOrder] = useState([]);
-
+  // Create order
   const createOrder = async (e) => {
-    e.preventDefault();
-    let addOrder = 'http://localhost:10000/Order/create_order';
-    let addOrderResponse = await fetch(addOrder, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify({
-        order_items: cart.map(car => car.Id),
-        order_locations: address
-      }),
-    });
-    let addOrderJson = await addOrderResponse.json();
-    return addOrderJson;
-  };
+    e.preventDefault()
+
+    if (cart.length === 0) {
+      alert("Your cart is empty. Please add items before checkout.")
+      return
+    }
+
+    try {
+      const addOrder = "http://localhost:10000/Order/create_order"
+      const addOrderResponse = await fetch(addOrder, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          order_items: cart.map((item) => item.Id),
+          order_locations: address,
+        }),
+      })
+
+      const addOrderJson = await addOrderResponse.json()
+      if (addOrderJson.message) {
+        alert("Order placed successfully!")
+        setCart([])
+      } else {
+        alert("Failed to place order. Please try again.")
+      }
+
+      return addOrderJson
+    } catch (error) {
+      console.error("Error creating order:", error)
+      alert("An error occurred while placing your order.")
+    }
+  }
+
+  // Get unique categories
+  const categories = ["All", ...new Set(menuList.map((item) => item.menu_type))]
+
+  // Filter menu items by category
+  const filteredMenu =
+    activeCategory === "All" ? menuList : menuList.filter((item) => item.menu_type === activeCategory)
+
+  // Render loading skeleton
+  const renderSkeleton = () => {
+    return Array(6)
+      .fill()
+      .map((_, index) => (
+        <Col key={index} md={6} lg={4} className="mb-4">
+          <Card className="menu-card skeleton">
+            <div className="skeleton-img"></div>
+            <Card.Body>
+              <div className="skeleton-title"></div>
+              <div className="skeleton-text"></div>
+              <div className="skeleton-text short"></div>
+              <div className="skeleton-button"></div>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))
+  }
 
   return (
-    <div>
+    <div className="menu-page">
       <Header />
-      <div className="container-fluid">
-        <div className="row justify-content-around ">
-          {menuList.map((item) => (
-            <Card style={{ width: "18rem", margintop: "2em", marginBottom: "2rem" ,  }}>
-              <Card.Body>
-                <>
-                  <img
-                    width={200}
-                    src={`http://localhost:10000/public/images/${item.menu_Image}`}
-                  />
-                </>
-                <Card.Title>{item.menu_name}</Card.Title>
-                <Card.Text>{item.menu_type}</Card.Text>
-                <Card.Text>{item.menu_price}</Card.Text>
-                <Card.Text>{item.menu_rating}</Card.Text>
-                {/* <Card.Text>{item.menu}</Card.Text> */}
 
-                <Button
-                  variant="primary"
-                  onClick={() => {
-                    addToCart(item);
-                  }}
-                >
-                  Add to Cart
-                </Button>
-              </Card.Body>
-            </Card>
+      {/* Hero Section */}
+      <div className="menu-hero">
+        <Container>
+          <h1>Our Menu</h1>
+          <p>Discover delicious food for delivery or pickup</p>
+        </Container>
+      </div>
+
+      <Container className="py-5">
+        {/* Category Filters */}
+        <div className="category-filters mb-4">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={activeCategory === category ? "primary" : "outline-primary"}
+              className="me-2 mb-2"
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </Button>
           ))}
         </div>
 
-        <h1>Cart</h1>
-        <Table responsive style={{ marginTop: "5rem" }}>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name of Menus</th>
-              <th>Price</th>
-              <th>Image</th>
-            </tr>
-          </thead>
+        {/* Menu Items */}
+        <h2 className="section-title mb-4">{activeCategory === "All" ? "All Items" : activeCategory}</h2>
 
-          <tbody>
-            {cart.map((cartItem) => {
-              return (
-                <tr key={cartItem.id}>
-                  <td>{cartItem.id}</td>
-                  <td>{cartItem.menu_name}</td>
-                  <td>{cartItem.menu_price}</td>
-                  <td>
-                    <img
-                      width={100}
-                      src={`http://localhost:10000/public/images/${cartItem.menu_Image}`}
-                    />
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="3"></td>
-              <td>Total Price: {totalPrice}</td>
-            </tr>
-          </tfoot>
-        </Table>
+        <Row>
+          {isLoading
+            ? renderSkeleton()
+            : filteredMenu.map((item) => (
+                <Col key={item.id} md={6} lg={4} className="mb-4">
+                  <Card className="menu-card h-100">
+                    <div className="menu-img-container">
+                      <img
+                        src={`http://localhost:10000/public/images/${item.menu_Image}`}
+                        alt={item.menu_name}
+                        className="menu-img"
+                      />
+                      <Badge bg="primary" className="menu-type-badge">
+                        {item.menu_type}
+                      </Badge>
+                    </div>
+                    <Card.Body>
+                      <div className="d-flex justify-content-between align-items-start">
+                        <Card.Title className="menu-title">{item.menu_name}</Card.Title>
+                        <div className="menu-rating">
+                          <StarFill className="text-warning me-1" />
+                          {item.menu_rating || "4.5"}
+                        </div>
+                      </div>
+                      <Card.Text className="menu-description">
+                        {item.menu_description || "Delicious food prepared with fresh ingredients."}
+                      </Card.Text>
+                      <div className="d-flex justify-content-between align-items-center mt-3">
+                        <div className="menu-price">NPR{Number.parseFloat(item.menu_price).toFixed(2)}</div>
+                        <Button variant="primary" onClick={() => addToCart(item)} className="add-to-cart-btn">
+                          Add to Cart
+                        </Button>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+        </Row>
 
-        <div className="container">
-          <div className="row">
-            <div className="col-8">
+        {/* Cart Section */}
+        <div className="cart-section mt-5">
+          <h2 className="section-title mb-4">Your Order</h2>
+
+          {cart.length === 0 ? (
+            <div className="empty-cart text-center py-5">
+              <i className="bi bi-cart text-muted" style={{ fontSize: "3rem" }}></i>
+              <p className="mt-3 text-muted">Your cart is empty. Add some delicious items!</p>
+            </div>
+          ) : (
+            <div className="cart-table-container">
+              <Table responsive className="cart-table">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.map((cartItem, index) => (
+                    <tr key={`${cartItem.id}-${index}`}>
+                      <td>
+                        <img
+                          width={80}
+                          height={60}
+                          src={`http://localhost:10000/public/images/${cartItem.menu_Image}`}
+                          alt={cartItem.menu_name}
+                          className="cart-item-img"
+                        />
+                      </td>
+                      <td>{cartItem.menu_name}</td>
+                      <td>${Number.parseFloat(cartItem.menu_price).toFixed(2)}</td>
+                      <td>
+                        <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(index)}>
+                          Remove
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colSpan="2" className="text-end fw-bold">
+                      Total:
+                    </td>
+                    <td colSpan="2" className="fw-bold">
+                      ${totalPrice}
+                    </td>
+                  </tr>
+                </tfoot>
+              </Table>
+            </div>
+          )}
+        </div>
+
+        {/* Delivery Section */}
+        <div className="delivery-section mt-5">
+          <h2 className="section-title mb-4">Delivery Details</h2>
+
+          <Row>
+            <Col lg={8} className="mb-4 mb-lg-0">
+              <div className="map-container">
               <MapContainer
                 center={location}
                 zoom={12}
@@ -206,23 +326,47 @@ function Menu() {
               <label htmlFor="" className="form-text">
                 Delivery Location
               </label>
-              <br />
-              <input
-                className="form-control"
-                value={address}
-                type="text"
-                disabled
-              />
+              </div>
+            </Col>
 
-              <br />
+            <Col lg={4}>
+              <div className="delivery-form">
+                <div className="mb-3">
+                  <label htmlFor="deliveryAddress" className="form-label">
+                    Delivery Location
+                  </label>
+                  <input id="deliveryAddress" className="form-control" value={address} type="text" disabled />
+                  <div className="form-text">This address will be used for your delivery</div>
+                </div>
 
-              <button className="btn btn-primary" onClick={createOrder}>Checkout</button>
-            </div>
-          </div>
+                <div className="mb-3">
+                  <label htmlFor="deliveryNotes" className="form-label">
+                    Delivery Notes (Optional)
+                  </label>
+                  <textarea
+                    id="deliveryNotes"
+                    className="form-control"
+                    rows="3"
+                    placeholder="Any special instructions for delivery?"
+                  ></textarea>
+                </div>
+
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-100 checkout-btn"
+                  onClick={createOrder}
+                  disabled={cart.length === 0}
+                >
+                  Checkout (mrp{totalPrice})
+                </Button>
+              </div>
+            </Col>
+          </Row>
         </div>
-      </div>
+      </Container>
     </div>
-  );
+  )
 }
 
-export default Menu;
+export default Menu

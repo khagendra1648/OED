@@ -28,30 +28,25 @@ function Login() {
             },
             credentials: 'include'
         }).then(data => {
-            data.json().then(body => {
-                if (data.status === 200) {
-                    alert('Login Successful');
-                    if(data.role ==="admin"){
-                        alert ("Admin Logged in sucessfully")
+            
+            if (data.status == 400) {
+                alert('Invalid credentials');
+            }
+            else{
+                data.json().then(body => {
+                    if (data.status === 200) {
+                        alert('Login Successful');
+                        if(data.role ==="admin"){
+                            alert ("Admin Logged in sucessfully")
+                        }
+                        else{
+                            window.location="http://localhost:3000/"
+                        }
+    
                     }
-                    else{
-                        window.location="http://localhost:3000/"
-                    }
-
-                }
-                
-                else {
-                    if (body?.data?.email) {
-                        alert(body?.data?.email);
-                    }
-                    else if (body?.data?.password) {
-                        alert(body?.data?.password);
-                    }
-                    else {
-                        alert('Invalid Credentials');
-                    }
-                }
-            })
+                })
+            }
+   
         }).catch(e => {
             console.log(e)
         })

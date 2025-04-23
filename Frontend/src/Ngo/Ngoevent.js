@@ -34,9 +34,9 @@ function MenuDash() {
         e.preventDefault();
         let formData = new FormData();
         if (event_Image && event_Image.length > 0) {
-            formData.append('eventImage', event_Image[0]);
+            formData.append('event_Image', event_Image[0]);
         } else {
-            formData.append('eventImage', event_Image);
+            formData.append('event_Image', event_Image);
         }
 
         formData.append('event_name', event_name);

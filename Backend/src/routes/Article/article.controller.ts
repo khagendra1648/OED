@@ -2,7 +2,7 @@ import { Controller } from "../../lib/bind"
 import { ImageSingle } from "../../lib/imageHandler";
 import { Delete, Get, Post, Put } from '../../lib/methods';
 import { InvalidInputError } from "../../middleware/error.middleware";
-import { AuthorizedRequest } from "../../typings/base.type"
+import { AuthorizedFileRequest, AuthorizedRequest } from "../../typings/base.type"
 import { articleService } from "./article.service";
 
 @Controller("/article")
@@ -14,7 +14,8 @@ export class  ArticleController {
 
     @Post("/create_article")
     @ImageSingle("article_Image")
-    async createarticle (req:AuthorizedRequest){
+    async createarticle (req:AuthorizedFileRequest){
+        console.log(req.requestFile)
         //body variable created where data is taken in body
         let body =req.body
         let message=this.service.createarticle(body)

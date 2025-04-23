@@ -1,0 +1,77 @@
+/* Add this CSS to your project */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #6d28d9, #4f46e5);
+    padding: 4rem 0;
+  }
+  
+  /* Article Cards */
+  .article-card {
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .article-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .article-image {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .article-card:hover .article-image {
+    transform: scale(1.05);
+  }
+  
+  .bookmark-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+  }
+  
+  .article-description {
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .article-type {
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Featured Article */
+  .featured-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: #f8f9fa;
+  }
+  
