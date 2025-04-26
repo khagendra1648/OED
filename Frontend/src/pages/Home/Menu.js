@@ -273,7 +273,7 @@ function Menu() {
                         />
                       </td>
                       <td>{cartItem.menu_name}</td>
-                      <td>${Number.parseFloat(cartItem.menu_price).toFixed(2)}</td>
+                      <td>NPR {Number.parseFloat(cartItem.menu_price).toFixed(2)}</td>
                       <td>
                         <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(index)}>
                           Remove
@@ -288,7 +288,7 @@ function Menu() {
                       Total:
                     </td>
                     <td colSpan="2" className="fw-bold">
-                      ${totalPrice}
+                      NPR {totalPrice}
                     </td>
                   </tr>
                 </tfoot>

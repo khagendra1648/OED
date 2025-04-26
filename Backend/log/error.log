@@ -4467,34 +4467,338 @@ JsonWebTokenError: invalid signature
 
 ----------------------------------------------------------------------------------------------------
 
-------------------------------------/get-user/ 2025/3/3 23:46:6------------------------------------
+------------------------------------/get-user/ 2025/3/4 7:43:19------------------------------------
 
 JsonWebTokenError: invalid signature
-    at C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:171:19
-    at getSecret (C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:97:14)
-    at Object.module.exports [as verify] (C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:101:10)
-    at GlobalStore._validate_token (C:\fyp\FYP-OED\Backend\src\store\store.global.ts:26:26)
-    at GlobalStore.verify_login_token (C:\fyp\FYP-OED\Backend\src\store\store.global.ts:70:25)
-    at UserController.<anonymous> (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:15:45)
-    at step (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:33:23)
-    at Object.next (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:14:53)
-    at C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:8:71
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
     at new Promise (<anonymous>)
 
 ----------------------------------------------------------------------------------------------------
 
-------------------------------------/get-user/ 2025/3/3 23:46:6------------------------------------
+------------------------------------/get-user/ 2025/3/4 7:43:19------------------------------------
 
 JsonWebTokenError: invalid signature
-    at C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:171:19
-    at getSecret (C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:97:14)
-    at Object.module.exports [as verify] (C:\fyp\FYP-OED\Backend\node_modules\jsonwebtoken\verify.js:101:10)
-    at GlobalStore._validate_token (C:\fyp\FYP-OED\Backend\src\store\store.global.ts:26:26)
-    at GlobalStore.verify_login_token (C:\fyp\FYP-OED\Backend\src\store\store.global.ts:70:25)
-    at UserController.<anonymous> (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:15:45)
-    at step (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:33:23)
-    at Object.next (C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:14:53)
-    at C:\fyp\FYP-OED\Backend\src\guards\role.guard.ts:8:71
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/4 9:19:22------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/4 9:42:54------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/4 9:42:54------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/5 7:19:57------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/5 7:19:57------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/5 7:45:28------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/5 7:45:28------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/get-user/ 2025/3/5 8:6:41-------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/get-user/ 2025/3/5 8:6:41-------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/5 8:36:10------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:5:55------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:5:55------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:15:42------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:15:42------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:58:51------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 13:58:51------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+-------------------------------------/put_menu 2025/3/6 15:7:39-------------------------------------
+
+QueryFailedError: Unknown column 'NaN' in 'field list'
+    at Query.onResult (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\driver\mysql\MysqlQueryRunner.ts:246:33)
+    at Query.execute (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\mysql2\lib\commands\command.js:36:14)
+    at PoolConnection.handlePacket (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\mysql2\lib\base\connection.js:475:34)
+    at PacketParser.onPacket (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\mysql2\lib\base\connection.js:93:12)
+    at PacketParser.executeStart (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\mysql2\lib\packet_parser.js:75:16)
+    at Socket.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\mysql2\lib\base\connection.js:100:25)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Socket.Readable.push (node:internal/streams/readable:392:5)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 16:12:49------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
+    at new Promise (<anonymous>)
+
+----------------------------------------------------------------------------------------------------
+
+------------------------------------/get-user/ 2025/3/6 16:12:49------------------------------------
+
+JsonWebTokenError: invalid signature
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:171:19
+    at getSecret (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (C:\FYP FOLDER\Project Folder - [OED]\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at GlobalStore._validate_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:26:26)
+    at GlobalStore.verify_login_token (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\store\store.global.ts:70:25)
+    at UserController.<anonymous> (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:15:45)
+    at step (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:33:23)
+    at Object.next (C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:14:53)
+    at C:\FYP FOLDER\Project Folder - [OED]\Backend\src\guards\role.guard.ts:8:71
     at new Promise (<anonymous>)
 
 ----------------------------------------------------------------------------------------------------

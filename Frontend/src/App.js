@@ -5,6 +5,8 @@ import About from "./pages/Home/About";
 import Login from "./pages/Home/Login";
 import Menu from "./pages/Home/Menu";
 import Registration from "./pages/Home/Registration";
+import LoginAdmin from "./pages/Home/LoginAdmin";
+
 
 import AdminDashboard from "./admin/AdminDashboard";
 import MenuDash from "./admin/MenuDash";
@@ -32,6 +34,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           < Route path="/Login" element={<Login />} />
+          < Route path="/LoginAdmin" element={<LoginAdmin />} />
+
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Registration" element={<Registration />} />
         

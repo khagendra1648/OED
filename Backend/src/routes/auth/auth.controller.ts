@@ -35,6 +35,15 @@ export class AuthController {
 
     }
 
+    @Post("/loginAdmin")
+    loginAdmin(req:Request,res:Response){
+        let body:LoginDto=login_schema.validateSync(req.body)
+        let message=this.service.login(body,res)
+        return message
+
+
+    }
+
     @Get("/logout")
     logout(req:Request,res:Response){
         return res.clearCookie("token")
@@ -50,7 +59,7 @@ export class AuthController {
         return {message:"Hi there"}
     }
     
-    @Post("/login-admin")
+    @Post("/loginAdmin")
     login_admin(req:Request,res:Response){
         let body:LoginDto=req.body
         let message=this.service.login(body,res)
