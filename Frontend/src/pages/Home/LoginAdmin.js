@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/Login.css';
-import logoImage from '../../Assets/logo/logo2.png'
 import { useNavigate, Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 
 function LoginAdmin() {
     const [email, setEmail] = useState('');

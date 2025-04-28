@@ -17,23 +17,28 @@ export class AuthService {
     ) { }
 
     async register(data: RegisterDto) {
-        let existingUser = await this.user_model.findOne({ where: { User_email: data.email } })
+        let email = data.email.toLowerCase();  // normalize email
+    
+        let existingUser = await this.user_model.findOne({ where: { User_email: email } });
         if (existingUser)
-            throw new InvalidInputError("Email already registered")
+            throw new InvalidInputError("Email already registered");
+    
         if (data.password !== data.confirmPassword)
-            throw new InvalidInputError("Password do not match")
-        let user = new User()
-        user.User_Phone = data.number
-        user.User_address = data.address
-        user.User_email = data.email
-        user.User_name = data.first_name + " " + data.last_name
-  
-        let hashPass = hashPassword(data.password)
-        user.User_password = hashPass
-        await this.user_model.create(user)
-        return { message: "User created" }
+            throw new InvalidInputError("Passwords do not match");
+    
+        let user = new User();
+        user.User_Phone = data.number;
+        user.User_address = data.address;
+        user.User_email = email;
+        user.User_name = `${data.first_name} ${data.last_name}`;
+    
+        let hashPass = hashPassword(data.password);
+        user.User_password = hashPass;
+    
+        await this.user_model.create(user);
+        return { message: "User created" };
     }
-
+    
     async register_admin(data: RegisterDto) {
         let existingUser = await this.user_model.findOne({ where: { User_email: data.email } })
         if (existingUser)
@@ -64,7 +69,7 @@ export class AuthService {
         token = generateToken(global_settings.secrets.authentication_user, { userId: User.Id, role: User.role })
         global_login_store.set_login_token(token, User.Id)
         setCookie(res, "token", token, {sameSite:false,secure:false})
-        return { statusCode: 200, message: "Login in successful" }
+        return { statusCode: 200, message: "Login is successful" }
     }
 
     async login_staff(body: LoginDto, res: Response) {
@@ -81,7 +86,7 @@ export class AuthService {
         token = generateToken(global_settings.secrets.authentication_staff, { userId: User.Id, role: User.role })
         global_login_store.set_login_token(token, User.Id)
         setCookie(res, "token", token, {})
-        return { statusCode: 200, message: "Login in successful" }
+        return { statusCode: 200, message: "Admin Login is successful" }
     }
 
 

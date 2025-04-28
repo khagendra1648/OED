@@ -13,7 +13,7 @@ export interface eventDto {
 export const event_schema = yup.object().shape({
   event_name: yup.string().required(),
   event_location: yup.string().required(),
-  event_time: yup.number(),
+  event_time: yup.number().required(),
   event_description: yup.string().required(),
   event_Image: yup.string().required(),
 });

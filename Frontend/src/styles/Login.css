@@ -1,13 +1,27 @@
+/* Login Page Styles */
+
+/* Add Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.login-page {
+  padding: 80px 0;
+  min-height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(16, 185, 129, 0.05));
+}
+
 .logo-login {
   display: flex;
   justify-content: center;
-  margin-bottom: -30px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -16,15 +30,11 @@
 }
 
 .container-login {
-  display: flex;
-  flex-direction: column;
-  margin: 20px auto;
-  background: #f7be27; /* Changed background color */
-  padding: 25px;
-  width: 90%;
-  max-width: 450px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
 }
 
 .header-login {
@@ -33,11 +43,11 @@
   align-items: center;
   gap: 12px;
   width: 100%;
-  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .text-login {
-  color: #1a3c34;
+  color: #1f2937;
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -45,13 +55,13 @@
 }
 
 .text-login:hover {
-  color: #2d665a;
+  color: #f7be27;
 }
 
 .underline-login {
   width: 70px;
   height: 5px;
-  background: linear-gradient(to right, #3cb371, #2d665a);
+  background: linear-gradient(to right, #f7be27, #f0b10f);
   border-radius: 10px;
   transition: width 0.3s ease;
 }
@@ -60,18 +70,62 @@
   width: 80px;
 }
 
-.haveaccount-login {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #374151;
-  padding-left: 0;
+.form-label {
   font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #f7be27;
+  box-shadow: 0 0 0 3px rgba(247, 190, 39, 0.2);
+}
+
+.btn-primary {
+  background-color: #f7be27;
+  border-color: #f7be27;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #f0b10f;
+  border-color: #f0b10f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(247, 190, 39, 0.2);
+}
+
+.btn-primary:disabled {
+  background-color: #f7be27;
+  border-color: #f7be27;
+  opacity: 0.7;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.haveaccount-login {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #6b7280;
   text-align: center;
   transition: color 0.3s ease;
 }
 
 .haveaccount-login span {
-  color: #3cb371;
+  color: #f7be27;
   cursor: pointer;
   text-decoration: none;
   margin-left: 6px;
@@ -81,13 +135,13 @@
 }
 
 .haveaccount-login span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #3cb371;
+  background-color: #f7be27;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
@@ -99,42 +153,62 @@
 }
 
 .haveaccount-login span:hover {
-  color: #2d665a;
+  color: #f0b10f;
 }
 
+/* Alert Styling */
+.alert-danger {
+  background-color: #fee2e2;
+  border-color: #fecaca;
+  color: #b91c1c;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .login-page {
+    padding: 60px 0;
+  }
+
   .container-login {
-      width: 95%;
-      padding: 20px;
+    padding: 30px;
   }
 
   .text-login {
-      font-size: 2rem;
-  }
-
-  .underline-login {
-      width: 60px;
-  }
-
-  .haveaccount-login {
-      font-size: 0.9rem;
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .login-page {
+    padding: 40px 0;
+  }
+
   .container-login {
-      padding: 15px;
+    padding: 25px 20px;
   }
 
   .text-login {
-      font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 
-  .logo-login {
-      margin-bottom: -20px;
+  .form-control {
+    padding: 10px 14px;
   }
 
-  .haveaccount-login {
-      font-size: 0.85rem;
+  .btn-primary {
+    padding: 10px;
   }
 }

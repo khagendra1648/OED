@@ -430,7 +430,7 @@ function Donation() {
                   <div className="testimonial-quote">
                     "I'm glad I could help those in need. The process was simple and the team was very responsive."
                   </div>
-                  <div className="testimonial-author">- Sarah Johnson</div>
+                  <div className="testimonial-author">- Narayan Koirala	</div>
                 </Card.Body>
               </Card>
             </Col>
@@ -441,7 +441,7 @@ function Donation() {
                     "Donating excess food from our restaurant has been a rewarding experience. It's a win-win for
                     everyone."
                   </div>
-                  <div className="testimonial-author">- Michael Chen, Local Restaurant Owner</div>
+                  <div className="testimonial-author">- Bina Tamang	</div>
                 </Card.Body>
               </Card>
             </Col>
@@ -452,7 +452,7 @@ function Donation() {
                     "The donation process is straightforward and efficient. I appreciate knowing my contribution is
                     making a difference."
                   </div>
-                  <div className="testimonial-author">- David Williams</div>
+                  <div className="testimonial-author">- Suman Kharel	</div>
                 </Card.Body>
               </Card>
             </Col>

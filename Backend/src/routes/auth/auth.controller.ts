@@ -35,14 +35,14 @@ export class AuthController {
 
     }
 
-    @Post("/loginAdmin")
-    loginAdmin(req:Request,res:Response){
-        let body:LoginDto=login_schema.validateSync(req.body)
-        let message=this.service.login(body,res)
-        return message
+    // @Post("/loginAdmin")
+    // loginAdmin(req:Request,res:Response){
+    //     let body:LoginDto=login_schema.validateSync(req.body)
+    //     let message=this.service.login_staff(body,res)
+    //     return message
 
 
-    }
+    // }
 
     @Get("/logout")
     logout(req:Request,res:Response){
@@ -62,7 +62,7 @@ export class AuthController {
     @Post("/loginAdmin")
     login_admin(req:Request,res:Response){
         let body:LoginDto=req.body
-        let message=this.service.login(body,res)
+        let message=this.service.login_staff(body,res)
         return message
     }
 

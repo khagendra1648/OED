@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../Assets/logo/logo.png";
 import "../styles/HeaderStyle.css";
 import swal from "sweetalert";
 
 const Header = () => {
-  const [nav, setNav] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [nav] = useState(false);
+  const [loggedIn] = useState(true);
   // const Location =userLocation();
   // const shouldDisplayNavbar = ![
   //   "./pages/home/Homepage"
